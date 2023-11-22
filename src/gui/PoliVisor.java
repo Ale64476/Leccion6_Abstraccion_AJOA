@@ -278,7 +278,7 @@ public class PoliVisor extends javax.swing.JFrame {
     }//GEN-LAST:event_botonTrianguloActionPerformed
 
     private void botonRectanguloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonRectanguloActionPerformed
-        figura = new Rectangulo();
+        figura = new Rectangulo(15,15,50,100);
         figura.dibujar(getPanelGraphics());
         enableControls();
     }//GEN-LAST:event_botonRectanguloActionPerformed
