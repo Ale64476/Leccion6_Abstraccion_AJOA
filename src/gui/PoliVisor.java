@@ -3,6 +3,7 @@ package gui;
 import graphics.Cuadrado;
 import graphics.FiguraGrafica;
 import graphics.Triangulo;
+import graphics.Rectangulo;
 import java.awt.Color;
 import java.awt.Graphics;
 import javax.swing.JColorChooser;
@@ -57,6 +58,11 @@ public class PoliVisor extends javax.swing.JFrame {
         });
 
         botonRectangulo.setText("Un rectángulo!");
+        botonRectangulo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonRectanguloActionPerformed(evt);
+            }
+        });
 
         botonTriangulo.setText("Un triángulo!");
         botonTriangulo.addActionListener(new java.awt.event.ActionListener() {
@@ -270,6 +276,12 @@ public class PoliVisor extends javax.swing.JFrame {
         figura.dibujar(getPanelGraphics());
         enableControls();
     }//GEN-LAST:event_botonTrianguloActionPerformed
+
+    private void botonRectanguloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonRectanguloActionPerformed
+        figura = new Rectangulo();
+        figura.dibujar(getPanelGraphics());
+        enableControls();
+    }//GEN-LAST:event_botonRectanguloActionPerformed
 
     /**
      * @param args the command line arguments
